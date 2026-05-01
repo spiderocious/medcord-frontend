@@ -73,9 +73,49 @@ const realScreens: Partial<Record<LeafKey, ComponentType>> = {
     })),
   ),
 
+  'data-state': registerLazyScreen(() =>
+    import('./data-state/data-state-overview-preview-screen').then((module) => ({
+      default: module.DataStateOverviewPreviewScreen,
+    })),
+  ),
+  'data-state/tables': registerLazyScreen(() =>
+    import('./data-state/tables-preview-screen').then((module) => ({
+      default: module.TablesPreviewScreen,
+    })),
+  ),
+  'data-state/lab': registerLazyScreen(() =>
+    import('./data-state/lab-preview-screen').then((module) => ({
+      default: module.LabPreviewScreen,
+    })),
+  ),
+  'data-state/vitals': registerLazyScreen(() =>
+    import('./data-state/vitals-preview-screen').then((module) => ({
+      default: module.VitalsPreviewScreen,
+    })),
+  ),
+  'data-state/progress': registerLazyScreen(() =>
+    import('./data-state/progress-preview-screen').then((module) => ({
+      default: module.ProgressPreviewScreen,
+    })),
+  ),
+  'data-state/skeletons-empty': registerLazyScreen(() =>
+    import('./data-state/skeletons-empty-preview-screen').then((module) => ({
+      default: module.SkeletonsEmptyPreviewScreen,
+    })),
+  ),
   'data-state/avatars-pills': registerLazyScreen(() =>
     import('./data-state/avatars-pills-preview-screen').then((module) => ({
       default: module.AvatarsPillsPreviewScreen,
+    })),
+  ),
+  'data-state/cards': registerLazyScreen(() =>
+    import('./data-state/cards-preview-screen').then((module) => ({
+      default: module.CardsPreviewScreen,
+    })),
+  ),
+  'data-state/tooltips': registerLazyScreen(() =>
+    import('./data-state/tooltips-preview-screen').then((module) => ({
+      default: module.TooltipsPreviewScreen,
     })),
   ),
 };
@@ -103,6 +143,8 @@ export function getScreenForLeaf(leaf: FlatPreviewLeaf): ComponentType {
  * Convenience: register a real screen lazily, used by `realScreens` entries.
  * Keeps the route file diff-clean as more screens come online.
  */
-export function registerLazyScreen(loader: () => Promise<{ default: ComponentType }>): ComponentType {
+export function registerLazyScreen(
+  loader: () => Promise<{ default: ComponentType }>,
+): ComponentType {
   return lazy(loader);
 }
