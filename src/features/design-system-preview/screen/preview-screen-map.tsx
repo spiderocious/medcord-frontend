@@ -41,6 +41,43 @@ const realScreens: Partial<Record<LeafKey, ComponentType>> = {
       default: module.MotionPreviewScreen,
     })),
   ),
+
+  primitives: registerLazyScreen(() =>
+    import('./primitives/primitives-overview-preview-screen').then((module) => ({
+      default: module.PrimitivesOverviewPreviewScreen,
+    })),
+  ),
+  'primitives/buttons': registerLazyScreen(() =>
+    import('./primitives/buttons-preview-screen').then((module) => ({
+      default: module.ButtonsPreviewScreen,
+    })),
+  ),
+  'primitives/inputs': registerLazyScreen(() =>
+    import('./primitives/inputs-preview-screen').then((module) => ({
+      default: module.InputsPreviewScreen,
+    })),
+  ),
+  'primitives/selection': registerLazyScreen(() =>
+    import('./primitives/selection-preview-screen').then((module) => ({
+      default: module.SelectionPreviewScreen,
+    })),
+  ),
+  'primitives/datetime': registerLazyScreen(() =>
+    import('./primitives/datetime-preview-screen').then((module) => ({
+      default: module.DatetimePreviewScreen,
+    })),
+  ),
+  'primitives/specialized': registerLazyScreen(() =>
+    import('./primitives/specialized-preview-screen').then((module) => ({
+      default: module.SpecializedPreviewScreen,
+    })),
+  ),
+
+  'data-state/avatars-pills': registerLazyScreen(() =>
+    import('./data-state/avatars-pills-preview-screen').then((module) => ({
+      default: module.AvatarsPillsPreviewScreen,
+    })),
+  ),
 };
 
 function partLandingNumber(leaf: FlatPreviewLeaf): string {
