@@ -4,6 +4,8 @@ import { Sheet } from '@ui/sheet';
 import { Stamp } from '@ui/stamp';
 import { DictatedText, Mark, Overline, RecordNumber } from '@ui/typography';
 
+import { Fragment } from 'react';
+
 /**
  * Foundation · Type
  * Reference: Medcord Design System / preview / 02-type.html.
@@ -231,8 +233,6 @@ function Tracking() {
     </div>
   );
 }
-
-import { Fragment } from 'react';
 
 function ComposedSheet() {
   return (

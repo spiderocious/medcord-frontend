@@ -16,7 +16,31 @@ import { ComingSoon } from './parts/coming-soon';
 type LeafKey = `${FlatPreviewLeaf['partPath']}/${string}` | FlatPreviewLeaf['partPath'];
 
 const realScreens: Partial<Record<LeafKey, ComponentType>> = {
-  // Foundation, primitives, etc. land here as they ship.
+  foundation: registerLazyScreen(() =>
+    import('./foundation/foundation-overview-preview-screen').then((module) => ({
+      default: module.FoundationOverviewPreviewScreen,
+    })),
+  ),
+  'foundation/palette': registerLazyScreen(() =>
+    import('./foundation/palette-preview-screen').then((module) => ({
+      default: module.PalettePreviewScreen,
+    })),
+  ),
+  'foundation/type': registerLazyScreen(() =>
+    import('./foundation/type-preview-screen').then((module) => ({
+      default: module.TypePreviewScreen,
+    })),
+  ),
+  'foundation/geometry': registerLazyScreen(() =>
+    import('./foundation/geometry-preview-screen').then((module) => ({
+      default: module.GeometryPreviewScreen,
+    })),
+  ),
+  'foundation/motion': registerLazyScreen(() =>
+    import('./foundation/motion-preview-screen').then((module) => ({
+      default: module.MotionPreviewScreen,
+    })),
+  ),
 };
 
 function partLandingNumber(leaf: FlatPreviewLeaf): string {
