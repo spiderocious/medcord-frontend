@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =============================================================
+   Surgical-paper, vol. 1 — design tokens.
+   Source of truth: Medcord Design System / preview / _foundation.css.
+   ============================================================= */
+
+@layer base {
+  :root,
+  [data-theme='default'] {
+    /* Paper & ink */
+    --paper: #f4efe6;
+    --paper-deep: #ece5d6;
+    --sheet: #fbf7ef;
+    --sheet-edge: #d9d0bb;
+    --ink: #181613;
+    --ink-2: #3c3833;
+    --ink-3: #6e665b;
+    --ink-4: #a39a8a;
+    --hair: #d9d0bb;
+    --hair-soft: #e6dfcf;
+    --rule: #181613;
+
+    /* Apothecary green ramp */
+    --green-50: #f0fdf4;
+    --green-100: #dcfce7;
+    --green-200: #bbf7d0;
+    --green-300: #86efac;
+    --green-400: #4ade80;
+    --green-500: #22c55e;
+    --green-600: #16a34a;
+    --green-700: #15803d;
+    --green-800: #166534;
+    --green-900: #14532d;
+
+    /* Clinical state */
+    --crit: #b42318;
+    --crit-bg: #fef3f2;
+    --crit-edge: #f2b5af;
+    --warn: #b25e09;
+    --warn-bg: #fdf6e3;
+    --warn-edge: #e8d9a1;
+    --low: #5b21b6;
+    --low-bg: #f7f2fe;
+    --low-edge: #d8c7f0;
+
+    /* Ribbons */
+    --ribbon-allergy: #b42318;
+    --ribbon-warn: #b25e09;
+    --ribbon-watch: #8c6e1d;
+
+    /* Tracking */
+    --track-display: -0.025em;
+    --track-h: -0.012em;
+    --track-body: 0;
+    --track-label: 0.01em;
+    --track-overline: 0.18em;
+    --track-mono: 0;
+
+    /* Geometry — radii */
+    --r-sharp: 0px;
+    --r-paper: 2px;
+    --r-card: 4px;
+    --r-control: 6px;
+    --r-soft: 8px;
+    --r-modal: 12px;
+    --r-pill: 9999px;
+
+    /* Spacing — 4px grid */
+    --gutter: 24px;
+
+    /* Hairline + shade utilities */
+    --line-1: 0 0 0 1px var(--hair);
+    --shade-1: 0 1px 0 rgba(24, 22, 19, 0.04);
+
+    /* Motion */
+    --ease-paper-out: cubic-bezier(0.18, 0.8, 0.34, 1);
+    --ease-paper-in: cubic-bezier(0.6, 0, 0.85, 0.2);
+    --ease-paper-turn: cubic-bezier(0.6, 0, 0.4, 1);
+    --duration-fast: 100ms;
+    --duration-normal: 200ms;
+    --duration-slow: 350ms;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ink);
+    background: var(--paper);
+    letter-spacing: var(--track-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'ss01', 'kern', 'calt';
+  }
+
+  ::selection {
+    background: rgba(22, 163, 74, 0.22);
+    color: var(--ink);
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--sheet-edge);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--ink-4);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0ms !important;
+    }
+  }
+}
