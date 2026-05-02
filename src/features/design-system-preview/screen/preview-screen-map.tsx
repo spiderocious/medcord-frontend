@@ -118,6 +118,88 @@ const realScreens: Partial<Record<LeafKey, ComponentType>> = {
       default: module.TooltipsPreviewScreen,
     })),
   ),
+  'data-state/charts': registerLazyScreen(() =>
+    import('./data-state/charts-preview-screen').then((module) => ({
+      default: module.ChartsPreviewScreen,
+    })),
+  ),
+  'data-state/navigation': registerLazyScreen(() =>
+    import('./data-state/navigation-preview-screen').then((module) => ({
+      default: module.NavigationPreviewScreen,
+    })),
+  ),
+
+  overlays: registerLazyScreen(() =>
+    import('./overlays/overlays-overview-preview-screen').then((module) => ({
+      default: module.OverlaysOverviewPreviewScreen,
+    })),
+  ),
+  'overlays/modals': registerLazyScreen(() =>
+    import('./overlays/modals-preview-screen').then((module) => ({
+      default: module.ModalsPreviewScreen,
+    })),
+  ),
+  'overlays/feedback': registerLazyScreen(() =>
+    import('./overlays/feedback-preview-screen').then((module) => ({
+      default: module.FeedbackPreviewScreen,
+    })),
+  ),
+  'overlays/cross': registerLazyScreen(() =>
+    import('./overlays/cross-preview-screen').then((module) => ({
+      default: module.CrossPreviewScreen,
+    })),
+  ),
+  'overlays/icons': registerLazyScreen(() =>
+    import('./overlays/icons-preview-screen').then((module) => ({
+      default: module.IconsPreviewScreen,
+    })),
+  ),
+  'overlays/drawer-service': registerLazyScreen(() =>
+    import('./overlays/drawer-service-preview-screen').then((module) => ({
+      default: module.DrawerServicePreviewScreen,
+    })),
+  ),
+
+  surfaces: registerLazyScreen(() =>
+    import('./surfaces/surfaces-overview-preview-screen').then((module) => ({
+      default: module.SurfacesOverviewPreviewScreen,
+    })),
+  ),
+  'surfaces/banner': registerLazyScreen(() =>
+    import('./surfaces/banner-preview-screen').then((module) => ({
+      default: module.BannerPreviewScreen,
+    })),
+  ),
+  'surfaces/bed-board': registerLazyScreen(() =>
+    import('./surfaces/bed-board-preview-screen').then((module) => ({
+      default: module.BedBoardPreviewScreen,
+    })),
+  ),
+  'surfaces/emr': registerLazyScreen(() =>
+    import('./surfaces/emr-preview-screen').then((module) => ({
+      default: module.EmrPreviewScreen,
+    })),
+  ),
+  'surfaces/telehealth': registerLazyScreen(() =>
+    import('./surfaces/telehealth-preview-screen').then((module) => ({
+      default: module.TelehealthPreviewScreen,
+    })),
+  ),
+  'surfaces/equipment': registerLazyScreen(() =>
+    import('./surfaces/equipment-preview-screen').then((module) => ({
+      default: module.EquipmentPreviewScreen,
+    })),
+  ),
+  'surfaces/staff': registerLazyScreen(() =>
+    import('./surfaces/staff-preview-screen').then((module) => ({
+      default: module.StaffPreviewScreen,
+    })),
+  ),
+  'surfaces/registration': registerLazyScreen(() =>
+    import('./surfaces/registration-preview-screen').then((module) => ({
+      default: module.RegistrationPreviewScreen,
+    })),
+  ),
 };
 
 function partLandingNumber(leaf: FlatPreviewLeaf): string {

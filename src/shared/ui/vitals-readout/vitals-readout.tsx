@@ -30,7 +30,7 @@ export function VitalsReadout({
   return (
     <div
       className={cn(
-        'font-mono font-medium leading-[0.95] tabular-nums tracking-[-0.02em] text-ink',
+        'font-mono font-medium tabular-nums leading-[0.95] tracking-[-0.02em] text-ink',
         SIZE[size],
         className,
       )}

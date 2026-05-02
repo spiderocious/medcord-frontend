@@ -63,7 +63,7 @@ export function HoverCard({
         <div
           role="dialog"
           className={cn(
-            'absolute left-0 top-[calc(100%+8px)] z-dropdown rounded-card border border-hair bg-sheet p-4 shadow-[0_8px_24px_rgba(24,22,19,0.12)]',
+            'z-dropdown absolute left-0 top-[calc(100%+8px)] rounded-card border border-hair bg-sheet p-4 shadow-[0_8px_24px_rgba(24,22,19,0.12)]',
             className,
           )}
           style={{ width }}

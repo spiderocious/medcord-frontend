@@ -14,7 +14,11 @@ import { TimeInput } from '@ui/time-input';
 export function DatetimePreviewScreen() {
   return (
     <Page>
-      <Stamp number="II · 04" title="Date & time" meta="hand-drawn calendar · analog clock · sentence recurrence" />
+      <Stamp
+        number="II · 04"
+        title="Date & time"
+        meta="hand-drawn calendar · analog clock · sentence recurrence"
+      />
 
       <SectionBreak label="Single date" />
       <SingleDate />

@@ -31,14 +31,10 @@ const SIZE: Record<ButtonSize, string> = {
 };
 
 const VARIANT: Record<ButtonVariant, string> = {
-  primary:
-    'border-green-700 bg-green-700 text-white hover:border-green-800 hover:bg-green-800',
-  secondary:
-    'border-ink bg-transparent text-ink hover:bg-ink hover:text-paper',
-  quiet:
-    'border-transparent bg-transparent text-ink-2 hover:bg-ink/5 hover:text-ink',
-  danger:
-    'border-transparent bg-transparent text-crit hover:bg-crit-bg',
+  primary: 'border-green-700 bg-green-700 text-white hover:border-green-800 hover:bg-green-800',
+  secondary: 'border-ink bg-transparent text-ink hover:bg-ink hover:text-paper',
+  quiet: 'border-transparent bg-transparent text-ink-2 hover:bg-ink/5 hover:text-ink',
+  danger: 'border-transparent bg-transparent text-crit hover:bg-crit-bg',
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
@@ -65,7 +61,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
       data-confirmed={confirmed || undefined}
       className={cn(
         'inline-flex items-center gap-2 whitespace-nowrap rounded-control border font-sans font-medium tracking-[0.005em] transition-colors duration-fast ease-paper-out',
-        'focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-green-600/30',
+        'focus-visible:ring-green-600/30 focus-visible:outline-none focus-visible:ring-[3px]',
         'disabled:pointer-events-none disabled:opacity-[0.38]',
         SIZE[size],
         VARIANT[variant],

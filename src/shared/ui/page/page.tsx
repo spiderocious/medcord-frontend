@@ -9,7 +9,5 @@ import { cn } from '@shared/utils/cn';
 export type PageProps = HTMLAttributes<HTMLDivElement>;
 
 export function Page({ className, ...rest }: PageProps) {
-  return (
-    <div className={cn('mx-auto max-w-[1180px] px-16 pb-24 pt-14', className)} {...rest} />
-  );
+  return <div className={cn('mx-auto max-w-[1180px] px-16 pb-24 pt-14', className)} {...rest} />;
 }

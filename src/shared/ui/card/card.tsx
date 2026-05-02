@@ -10,7 +10,7 @@ import { cn } from '@shared/utils/cn';
  */
 export type CardDensity = 'tight' | 'regular' | 'spacious';
 
-export interface CardProps extends HTMLAttributes<HTMLDivElement> {
+export interface CardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> {
   density?: CardDensity;
   /** Top-bar overline / mark, optional. */
   eyebrow?: ReactNode;
@@ -53,17 +53,13 @@ export function Card({
             </div>
           )}
           {title ? (
-            <h3 className="m-0 font-serif text-[20px] font-medium tracking-h text-ink">
-              {title}
-            </h3>
+            <h3 className="m-0 font-serif text-[20px] font-medium tracking-h text-ink">{title}</h3>
           ) : null}
           {subtitle ? <div className="text-[13px] text-ink-3">{subtitle}</div> : null}
         </div>
       )}
       <div className={cn('flex flex-col', px, gap)}>{children}</div>
-      {footer ? (
-        <div className={cn('border-t border-hair-soft', px)}>{footer}</div>
-      ) : null}
+      {footer ? <div className={cn('border-t border-hair-soft', px)}>{footer}</div> : null}
     </div>
   );
 }

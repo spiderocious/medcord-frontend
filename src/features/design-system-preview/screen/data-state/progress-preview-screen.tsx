@@ -6,7 +6,11 @@ import { Stamp } from '@ui/stamp';
 export function ProgressPreviewScreen() {
   return (
     <Page>
-      <Stamp number="III · 04" title="Progress" meta="printed gauges · linear · ring · drip · stepper" />
+      <Stamp
+        number="III · 04"
+        title="Progress"
+        meta="printed gauges · linear · ring · drip · stepper"
+      />
 
       <SectionBreak label="Linear bars" />
       <div className="grid grid-cols-2 gap-6">

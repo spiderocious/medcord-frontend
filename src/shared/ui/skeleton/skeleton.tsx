@@ -16,7 +16,14 @@ export interface SkeletonProps extends HTMLAttributes<HTMLDivElement> {
   circle?: boolean;
 }
 
-export function Skeleton({ w, h = '12px', circle = false, className, style, ...rest }: SkeletonProps) {
+export function Skeleton({
+  w,
+  h = '12px',
+  circle = false,
+  className,
+  style,
+  ...rest
+}: SkeletonProps) {
   return (
     <span
       aria-hidden

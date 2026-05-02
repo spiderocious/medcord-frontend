@@ -27,17 +27,17 @@ export function GeometryPreviewScreen() {
 
       <SectionBreak label="Corner radii — sharp by default" />
       <p className="m-0 mb-[22px] max-w-[60ch] text-[13px] leading-[1.55] text-ink-2">
-        Paper has corners. Buttons get 6 px so they look pressable; cards get 4 px so they look
-        like sheets, not bubbles. Pills and avatars are full. Nothing else uses radius — not
-        banners, not section headers, not images.
+        Paper has corners. Buttons get 6 px so they look pressable; cards get 4 px so they look like
+        sheets, not bubbles. Pills and avatars are full. Nothing else uses radius — not banners, not
+        section headers, not images.
       </p>
       <RadiiRow />
 
       <SectionBreak label="Edges — hairlines, not shadows" />
       <p className="m-0 mb-[18px] max-w-[60ch] text-[13px] leading-[1.55] text-ink-2">
-        Elevation is not depth — it is contrast. A sheet on the canvas takes a one-pixel
-        sheet-edge. A heavier separation takes a one-pixel ink rule. Drop shadows are reserved
-        for popovers and modals only, and even there they stay shallow.
+        Elevation is not depth — it is contrast. A sheet on the canvas takes a one-pixel sheet-edge.
+        A heavier separation takes a one-pixel ink rule. Drop shadows are reserved for popovers and
+        modals only, and even there they stay shallow.
       </p>
       <EdgesRow />
 
@@ -170,8 +170,22 @@ function Density({ variant }: { variant: 'compact' | 'regular' | 'comfortable' }
         : { row: 'py-[14px] text-[14px]', mrn: 'text-[13px]' };
 
   const rows = [
-    { name: 'Adebayo, Olumide', mrn: '10458291', bed: '3-N · 312A', md: 'Patel, R MD', status: 'In room', tone: 'ok' as const },
-    { name: 'Chen, Wei-Lin', mrn: '10293874', bed: '3-N · 312B', md: 'Patel, R MD', status: 'Awaiting labs', tone: 'warn' as const },
+    {
+      name: 'Adebayo, Olumide',
+      mrn: '10458291',
+      bed: '3-N · 312A',
+      md: 'Patel, R MD',
+      status: 'In room',
+      tone: 'ok' as const,
+    },
+    {
+      name: 'Chen, Wei-Lin',
+      mrn: '10293874',
+      bed: '3-N · 312B',
+      md: 'Patel, R MD',
+      status: 'Awaiting labs',
+      tone: 'warn' as const,
+    },
   ];
 
   return (

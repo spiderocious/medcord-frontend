@@ -21,9 +21,7 @@ export function EmptyState({ title, detail, action, className }: EmptyStateProps
       <p className="m-0 max-w-[42ch] font-serif text-[18px] italic leading-[1.45] text-ink-2">
         {title}
       </p>
-      {detail ? (
-        <p className="m-0 max-w-[42ch] text-[13px] text-ink-3">{detail}</p>
-      ) : null}
+      {detail ? <p className="m-0 max-w-[42ch] text-[13px] text-ink-3">{detail}</p> : null}
       {action}
     </div>
   );

@@ -51,7 +51,7 @@ export function Popover({
         <div
           role="dialog"
           className={cn(
-            'absolute z-dropdown mt-2 rounded-card border border-hair bg-sheet p-3 shadow-[0_8px_24px_rgba(24,22,19,0.12)]',
+            'z-dropdown absolute mt-2 rounded-card border border-hair bg-sheet p-3 shadow-[0_8px_24px_rgba(24,22,19,0.12)]',
             side === 'bottom-start' ? 'left-0' : 'right-0',
             className,
           )}

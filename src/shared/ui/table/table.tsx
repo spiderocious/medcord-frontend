@@ -77,7 +77,7 @@ export function Table<T>({
             type="button"
             onClick={() => col.sortable && onSort?.(col.key)}
             className={cn(
-              'flex items-center gap-1 border-0 bg-transparent p-0 text-left font-inherit text-inherit',
+              'font-inherit flex items-center gap-1 border-0 bg-transparent p-0 text-left text-inherit',
               col.sortable && 'cursor-pointer hover:text-ink',
               col.align === 'right' && 'justify-end',
             )}
@@ -108,7 +108,7 @@ export function Table<T>({
                 index === rows.length - 1 ? '' : 'border-b border-hair',
                 onRowClick && 'cursor-pointer',
                 selected && 'border-l-[2px] border-l-ink pl-[12px]',
-                critical && 'border-l-[2px] border-l-crit pl-[12px] bg-crit-bg/40',
+                critical && 'bg-crit-bg/40 border-l-[2px] border-l-crit pl-[12px]',
               )}
               style={{ gridTemplateColumns: gridTemplate }}
             >

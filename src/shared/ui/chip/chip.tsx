@@ -44,7 +44,7 @@ export function Chip({
     >
       <button
         type="button"
-        className="cursor-pointer border-0 bg-transparent p-0 font-inherit text-inherit outline-none"
+        className="font-inherit cursor-pointer border-0 bg-transparent p-0 text-inherit outline-none"
         {...rest}
       >
         {children}

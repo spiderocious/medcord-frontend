@@ -18,7 +18,7 @@ export function ErrorState({ title, detail, action, className }: ErrorStateProps
   return (
     <div
       className={cn(
-        'flex flex-col items-start gap-3 border-l-[3px] border-l-crit bg-crit-bg/40 px-4 py-6',
+        'bg-crit-bg/40 flex flex-col items-start gap-3 border-l-[3px] border-l-crit px-4 py-6',
         className,
       )}
     >

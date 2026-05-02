@@ -44,7 +44,13 @@ export function BodyDiagram({ pins = [], onPinAdd, className }: BodyDiagramProps
       onClick={handleClick}
       aria-label="Anatomical body diagram"
     >
-      <g fill="none" stroke="#181613" strokeWidth="0.6" strokeLinecap="round" strokeLinejoin="round">
+      <g
+        fill="none"
+        stroke="#181613"
+        strokeWidth="0.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
         <circle cx="50" cy="22" r="14" />
         <path d="M30 38 Q50 30 70 38 L78 90 Q72 110 65 124 L65 165 L60 215 L52 215 L52 175 L48 175 L48 215 L40 215 L35 165 L35 124 Q28 110 22 90 Z" />
         <path d="M30 42 L8 100 L14 130 L22 132" />
@@ -52,12 +58,7 @@ export function BodyDiagram({ pins = [], onPinAdd, className }: BodyDiagramProps
       </g>
       {pins.map((pin) => (
         <g key={pin.id}>
-          <circle
-            cx={pin.x * 100}
-            cy={pin.y * 220}
-            r="2.2"
-            className={TONE[pin.tone ?? 'ink']}
-          />
+          <circle cx={pin.x * 100} cy={pin.y * 220} r="2.2" className={TONE[pin.tone ?? 'ink']} />
           {pin.label ? (
             <text
               x={pin.x * 100 + 4}

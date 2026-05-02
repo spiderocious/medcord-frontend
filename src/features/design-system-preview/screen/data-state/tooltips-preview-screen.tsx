@@ -12,7 +12,11 @@ import { Mark, Overline, RecordNumber } from '@ui/typography';
 export function TooltipsPreviewScreen() {
   return (
     <Page>
-      <Stamp number="III · 09" title="Tooltips · hovercards" meta="small surfaces that float above the page" />
+      <Stamp
+        number="III · 09"
+        title="Tooltips · hovercards"
+        meta="small surfaces that float above the page"
+      />
 
       <SectionBreak label="Tooltip" />
       <div className="flex items-center gap-6">

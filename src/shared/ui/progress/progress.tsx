@@ -72,7 +72,10 @@ export function ProgressRing({
   const r = (size - thickness) / 2;
   const c = 2 * Math.PI * r;
   return (
-    <div className={cn('relative inline-flex items-center justify-center', className)} style={{ width: size, height: size }}>
+    <div
+      className={cn('relative inline-flex items-center justify-center', className)}
+      style={{ width: size, height: size }}
+    >
       <svg width={size} height={size}>
         <circle
           cx={size / 2}
@@ -113,7 +116,10 @@ export interface ProgressStepperProps {
 export function ProgressStepper({ steps, current, className }: ProgressStepperProps) {
   return (
     <ol
-      className={cn('m-0 flex list-none items-center gap-3 p-0 font-mono text-[11px] tracking-mono', className)}
+      className={cn(
+        'm-0 flex list-none items-center gap-3 p-0 font-mono text-[11px] tracking-mono',
+        className,
+      )}
     >
       {steps.map((step, index) => {
         const isDone = index < current;
@@ -159,7 +165,7 @@ export function ProgressDrip({ remaining, total, rate, className }: ProgressDrip
     <div className={cn('flex items-end gap-3', className)}>
       <div className="relative h-[120px] w-12 overflow-hidden rounded-b-soft border border-ink bg-sheet">
         <div
-          className="absolute bottom-0 left-0 right-0 bg-ink/80"
+          className="bg-ink/80 absolute bottom-0 left-0 right-0"
           style={{ height: `${pct * 100}%` }}
         />
       </div>

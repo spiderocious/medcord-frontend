@@ -59,9 +59,7 @@ export function DropZone({
         {title}
       </span>
       {meta ? (
-        <span className="mt-1.5 block font-mono text-[11px] tracking-mono text-ink-3">
-          {meta}
-        </span>
+        <span className="mt-1.5 block font-mono text-[11px] tracking-mono text-ink-3">{meta}</span>
       ) : null}
     </button>
   );

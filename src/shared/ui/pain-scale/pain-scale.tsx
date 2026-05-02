@@ -34,7 +34,7 @@ export function PainScale({ value, onChange, className }: PainScaleProps) {
             type="button"
             onClick={() => onChange?.(face.num)}
             className={cn(
-              'cursor-pointer border-0 px-4 pb-3.5 pt-[18px] text-center font-inherit',
+              'font-inherit cursor-pointer border-0 px-4 pb-3.5 pt-[18px] text-center',
               index === FACES.length - 1 ? '' : 'border-r border-hair',
               isOn ? 'bg-paper shadow-[inset_0_-3px_0_var(--ink)]' : 'bg-sheet',
             )}
@@ -50,12 +50,7 @@ export function PainScale({ value, onChange, className }: PainScaleProps) {
             <div className="my-1 font-mono text-[22px] font-medium tracking-mono text-ink">
               {face.num}
             </div>
-            <div
-              className={cn(
-                'font-serif text-[13px] italic',
-                isOn ? 'text-ink' : 'text-ink-3',
-              )}
-            >
+            <div className={cn('font-serif text-[13px] italic', isOn ? 'text-ink' : 'text-ink-3')}>
               {face.word}
             </div>
           </button>

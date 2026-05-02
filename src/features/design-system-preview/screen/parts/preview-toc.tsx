@@ -107,7 +107,7 @@ export function PreviewToc() {
                 >
                   <span
                     className={cn(
-                      '-translate-y-[3px] block h-1 w-1 flex-shrink-0 rounded-full border border-ink-4 bg-transparent',
+                      'block h-1 w-1 flex-shrink-0 -translate-y-[3px] rounded-full border border-ink-4 bg-transparent',
                       active && 'border-ink bg-ink',
                     )}
                   />
@@ -138,8 +138,7 @@ function filterLeaves(query: string): FilteredPart[] {
   const q = query.trim().toLowerCase();
   return PREVIEW_PARTS.map<FilteredPart>((part) => {
     const items = PREVIEW_LEAVES.filter(
-      (leaf) =>
-        leaf.partId === part.id && (q === '' || leaf.name.toLowerCase().includes(q)),
+      (leaf) => leaf.partId === part.id && (q === '' || leaf.name.toLowerCase().includes(q)),
     );
     return { id: part.id, title: part.title, items };
   }).filter((part) => part.items.length > 0);

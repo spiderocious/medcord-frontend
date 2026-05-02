@@ -63,9 +63,9 @@ export function TypePreviewScreen() {
         meta="Inter 400 · 14 / 1.55\ntracking 0"
         sample={
           <span className="block max-w-[60ch] text-[14px] leading-[1.55]">
-            Plan to admit overnight to step-down for serial troponins and cardiology evaluation.
-            NPO until cath team has cleared the patient. Spouse has been notified and will arrive
-            within the hour.
+            Plan to admit overnight to step-down for serial troponins and cardiology evaluation. NPO
+            until cath team has cleared the patient. Spouse has been notified and will arrive within
+            the hour.
           </span>
         }
       />
@@ -74,20 +74,26 @@ export function TypePreviewScreen() {
         meta="Inter 400 · 13 / 1.5\ntracking 0"
         sample={
           <span className="block max-w-[60ch] text-[13px] leading-[1.5] text-ink-2">
-            Adjust filters to widen the view, or add patients to your team&rsquo;s worklist from
-            the floor map.
+            Adjust filters to widen the view, or add patients to your team&rsquo;s worklist from the
+            floor map.
           </span>
         }
       />
       <Specimen
         label="Label"
         meta="Inter 600 · 13\ntracking +0.01em"
-        sample={
-          <span className="text-[13px] font-semibold tracking-label">Date of birth</span>
-        }
+        sample={<span className="text-[13px] font-semibold tracking-label">Date of birth</span>}
       />
-      <Specimen label="Overline" meta="Inter 600 · 11 · uppercase\ntracking +0.18em" sample={<Overline>Vitals · last 24 hours</Overline>} />
-      <Specimen label="Mark" meta="Mono 500 · 10 · uppercase\ntracking +0.14em" sample={<Mark>MRN · ENC · ICD-10</Mark>} />
+      <Specimen
+        label="Overline"
+        meta="Inter 600 · 11 · uppercase\ntracking +0.18em"
+        sample={<Overline>Vitals · last 24 hours</Overline>}
+      />
+      <Specimen
+        label="Mark"
+        meta="Mono 500 · 10 · uppercase\ntracking +0.14em"
+        sample={<Mark>MRN · ENC · ICD-10</Mark>}
+      />
       <Specimen
         label="Record"
         meta="Mono 500 · 12\ntabular nums on"
@@ -97,7 +103,7 @@ export function TypePreviewScreen() {
         label="Reading — large"
         meta="Mono 500 · 40 / 0.95\ntracking −0.02em · for vitals"
         sample={
-          <span className="font-mono text-[40px] font-medium leading-[0.95] tabular-nums tracking-[-0.02em]">
+          <span className="font-mono text-[40px] font-medium tabular-nums leading-[0.95] tracking-[-0.02em]">
             128<span className="text-ink-3">/</span>82
             <span className="ml-1 font-sans text-[16px] tracking-wide text-ink-3">mmHg</span>
           </span>
@@ -107,7 +113,7 @@ export function TypePreviewScreen() {
         label="Reading — medium"
         meta="Mono 500 · 28"
         sample={
-          <span className="font-mono text-[28px] font-medium leading-[0.95] tabular-nums tracking-[-0.02em]">
+          <span className="font-mono text-[28px] font-medium tabular-nums leading-[0.95] tracking-[-0.02em]">
             76<span className="ml-1 font-sans text-[12px] text-ink-3">bpm</span>
           </span>
         }
@@ -239,15 +245,14 @@ function ComposedSheet() {
     <Sheet padding="md" className="max-w-[680px]">
       <Overline className="mb-2.5 block">Progress note · 14:08</Overline>
       <h3 className="mb-2 mt-0 font-serif text-[22px] font-medium tracking-h">
-        Adebayo, Olumide{' '}
-        <span className="font-normal text-ink-3">— f/u for chest pressure</span>
+        Adebayo, Olumide <span className="font-normal text-ink-3">— f/u for chest pressure</span>
       </h3>
       <RecordNumber className="mb-3.5 block">
         MRN 10458291 · ENC-2026-04-29-1184 · 64 M · DOB 1962-03-14
       </RecordNumber>
       <DictatedText className="m-0 mb-3.5">
-        &ldquo;Pressure is gone now. Walked the unit twice without symptoms. He&rsquo;d like to
-        know when he can go home.&rdquo;
+        &ldquo;Pressure is gone now. Walked the unit twice without symptoms. He&rsquo;d like to know
+        when he can go home.&rdquo;
       </DictatedText>
       <p className="m-0 mb-3 leading-[1.55] text-ink-2">
         Vitals stable. Repeat troponin pending. ECG unchanged from prior. Plan to discharge after
@@ -267,9 +272,11 @@ function Reading({ label, value, unit }: { label: string; value: string; unit?: 
   return (
     <div>
       <Overline>{label}</Overline>
-      <div className="font-mono text-[20px] font-medium leading-[0.95] tabular-nums tracking-[-0.02em] text-ink">
+      <div className="font-mono text-[20px] font-medium tabular-nums leading-[0.95] tracking-[-0.02em] text-ink">
         {value}
-        {unit ? <span className="ml-1 font-sans text-[8px] tracking-wide text-ink-3">{unit}</span> : null}
+        {unit ? (
+          <span className="ml-1 font-sans text-[8px] tracking-wide text-ink-3">{unit}</span>
+        ) : null}
       </div>
     </div>
   );

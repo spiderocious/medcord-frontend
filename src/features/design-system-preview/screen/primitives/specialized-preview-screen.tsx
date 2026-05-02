@@ -17,7 +17,11 @@ import { Stamp } from '@ui/stamp';
 export function SpecializedPreviewScreen() {
   return (
     <Page>
-      <Stamp number="II · 05" title="Specialized inputs" meta="drop · sign · diagram · PIN · DICOM" />
+      <Stamp
+        number="II · 05"
+        title="Specialized inputs"
+        meta="drop · sign · diagram · PIN · DICOM"
+      />
 
       <SectionBreak label="Drop zone & files" />
       <DropZoneDemo />

@@ -129,6 +129,11 @@ export const PREVIEW_PARTS: readonly PreviewPart[] = [
         reference: 'preview/42-cross.html',
       },
       { name: 'Iconography', path: 'icons', reference: 'preview/43-icons.html' },
+      {
+        name: 'DrawerService · launcher',
+        path: 'drawer-service',
+        reference: 'ohlify · packages/ui/src/modals/drawer-service.ts',
+      },
     ],
   },
 ] as const;

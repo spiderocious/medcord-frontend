@@ -19,13 +19,7 @@ export interface TooltipProps {
   className?: string;
 }
 
-export function Tooltip({
-  label,
-  side = 'top',
-  mono = true,
-  children,
-  className,
-}: TooltipProps) {
+export function Tooltip({ label, side = 'top', mono = true, children, className }: TooltipProps) {
   const [open, setOpen] = useState(false);
   return (
     <span
@@ -39,7 +33,7 @@ export function Tooltip({
       <span
         role="tooltip"
         className={cn(
-          'pointer-events-none absolute left-1/2 z-tooltip -translate-x-1/2 whitespace-nowrap rounded-paper bg-ink px-2 py-1 text-paper opacity-0 transition-opacity duration-fast ease-paper-out',
+          'z-tooltip pointer-events-none absolute left-1/2 -translate-x-1/2 whitespace-nowrap rounded-paper bg-ink px-2 py-1 text-paper opacity-0 transition-opacity duration-fast ease-paper-out',
           side === 'top' ? 'bottom-[calc(100%+6px)]' : 'top-[calc(100%+6px)]',
           mono ? 'font-mono text-[10px] uppercase tracking-[0.18em]' : 'font-sans text-[11px]',
           open && 'opacity-100',

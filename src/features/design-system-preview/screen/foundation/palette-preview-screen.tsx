@@ -36,23 +36,20 @@ function Frontispiece() {
           Ink on warm paper.
         </h2>
         <p className="m-0 max-w-[36ch] text-[13px] leading-[1.55] text-ink-2">
-          The canvas is a faintly warm bone — closer to old chart paper than to a cool grey
-          screen. Type sits on it as ink: a warm near-black with a hint of the same paper
-          undertone, so the page reads as one material rather than two.
+          The canvas is a faintly warm bone — closer to old chart paper than to a cool grey screen.
+          Type sits on it as ink: a warm near-black with a hint of the same paper undertone, so the
+          page reads as one material rather than two.
         </p>
-        <SwatchRow
-          colors={['#F4EFE6', '#ECE5D6', '#FBF7EF', '#D9D0BB']}
-          label="paper · sheet"
-        />
+        <SwatchRow colors={['#F4EFE6', '#ECE5D6', '#FBF7EF', '#D9D0BB']} label="paper · sheet" />
       </div>
       <div className="bg-ink px-8 pb-8 pt-9 text-paper">
         <h2 className="mb-[18px] mt-0 font-serif text-[30px] font-medium leading-[1] tracking-display text-paper">
           And the same, after dark.
         </h2>
         <p className="m-0 max-w-[36ch] text-[13px] leading-[1.55] text-[rgba(244,239,230,0.78)]">
-          Inverted, the paper becomes ink. Screens at the night-shift station should not
-          glow — they should recede. The accent green stays the same hue; the paper just
-          gets out of the way so vitals can shout.
+          Inverted, the paper becomes ink. Screens at the night-shift station should not glow — they
+          should recede. The accent green stays the same hue; the paper just gets out of the way so
+          vitals can shout.
         </p>
         <SwatchRow
           colors={['#181613', '#3C3833', '#6E665B', '#A39A8A']}
@@ -117,10 +114,7 @@ function PaletteRow({
         <p className="m-0 max-w-[18ch] text-[12px] leading-[1.5] text-ink-3">{description}</p>
       </div>
       <div className="min-w-0 border-b border-hair pb-[22px] pl-6 pt-[22px]">
-        <div
-          className="grid"
-          style={{ gridTemplateColumns: `repeat(${steps.length}, 1fr)` }}
-        >
+        <div className="grid" style={{ gridTemplateColumns: `repeat(${steps.length}, 1fr)` }}>
           {steps.map((step) => (
             <div
               key={step.hex}
@@ -204,9 +198,7 @@ function ClinicalStateRow() {
   return (
     <div className="grid grid-cols-[200px_1fr] border-t border-ink">
       <div className="border-b border-r border-hair pb-[22px] pr-6 pt-[22px]">
-        <h3 className="mb-1 mt-0 font-serif text-[19px] font-medium tracking-h">
-          Clinical state
-        </h3>
+        <h3 className="mb-1 mt-0 font-serif text-[19px] font-medium tracking-h">Clinical state</h3>
         <p className="m-0 max-w-[18ch] text-[12px] leading-[1.5] text-ink-3">
           Critical-red is reserved for life-threatening only. Amber covers all other warnings.
           Violet is abnormal-low.

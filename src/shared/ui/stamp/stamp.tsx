@@ -18,10 +18,7 @@ export interface StampProps extends HTMLAttributes<HTMLElement> {
 export function Stamp({ number, title, meta, className, ...rest }: StampProps) {
   return (
     <header
-      className={cn(
-        'mb-9 flex items-baseline gap-4 border-b border-ink pb-[18px]',
-        className,
-      )}
+      className={cn('mb-9 flex items-baseline gap-4 border-b border-ink pb-[18px]', className)}
       {...rest}
     >
       {number ? (

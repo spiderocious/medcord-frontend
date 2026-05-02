@@ -15,7 +15,11 @@ import { Mark } from '@ui/typography';
 export function AvatarsPillsPreviewScreen() {
   return (
     <Page>
-      <Stamp number="III · 07" title="Avatars · pills · status" meta="the small marks that sit on every page" />
+      <Stamp
+        number="III · 07"
+        title="Avatars · pills · status"
+        meta="the small marks that sit on every page"
+      />
 
       <SectionBreak label="Avatars" />
       <AvatarRow />

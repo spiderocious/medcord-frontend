@@ -100,10 +100,16 @@ function RangeMarker({
   void high;
   const clamped = Math.max(0, Math.min(1, position));
   const color =
-    tone === 'critical' ? 'bg-crit' : tone === 'high' ? 'bg-warn' : tone === 'low' ? 'bg-low' : 'bg-ink';
+    tone === 'critical'
+      ? 'bg-crit'
+      : tone === 'high'
+        ? 'bg-warn'
+        : tone === 'low'
+          ? 'bg-low'
+          : 'bg-ink';
   return (
     <div className="relative h-[2px] w-[160px] bg-hair">
-      <div className="absolute inset-y-0 left-1/4 right-1/4 bg-green-300/60" />
+      <div className="bg-green-300/60 absolute inset-y-0 left-1/4 right-1/4" />
       <span
         className={cn('absolute top-1/2 h-2 w-px -translate-y-1/2', color)}
         style={{ left: `${clamped * 100}%` }}

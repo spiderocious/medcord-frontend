@@ -3,8 +3,26 @@ import { Page } from '@ui/page';
 import { Stamp } from '@ui/stamp';
 
 const ROWS: LabResultRow[] = [
-  { id: 'na', code: 'NA', name: 'Sodium', value: '138', unit: 'mEq/L', refLow: 135, refHigh: 145, position: 0.4 },
-  { id: 'k', code: 'K', name: 'Potassium', value: '4.1', unit: 'mEq/L', refLow: 3.5, refHigh: 5.0, position: 0.5 },
+  {
+    id: 'na',
+    code: 'NA',
+    name: 'Sodium',
+    value: '138',
+    unit: 'mEq/L',
+    refLow: 135,
+    refHigh: 145,
+    position: 0.4,
+  },
+  {
+    id: 'k',
+    code: 'K',
+    name: 'Potassium',
+    value: '4.1',
+    unit: 'mEq/L',
+    refLow: 3.5,
+    refHigh: 5.0,
+    position: 0.5,
+  },
   {
     id: 'glu',
     code: 'GLU',
@@ -54,7 +72,11 @@ const ROWS: LabResultRow[] = [
 export function LabPreviewScreen() {
   return (
     <Page>
-      <Stamp number="III · 02" title="Lab specimen" meta="each row treated as typeset, not tabular" />
+      <Stamp
+        number="III · 02"
+        title="Lab specimen"
+        meta="each row treated as typeset, not tabular"
+      />
       <LabResultsTable rows={ROWS} />
     </Page>
   );

@@ -54,7 +54,9 @@ export function TimeInput({ hours, minutes, onChange, className }: TimeInputProp
           min={0}
           max={23}
           value={hours}
-          onChange={(event) => onChange?.({ hours: clamp(Number(event.target.value), 0, 23), minutes })}
+          onChange={(event) =>
+            onChange?.({ hours: clamp(Number(event.target.value), 0, 23), minutes })
+          }
           className="w-[80px] border-0 border-b-[1.5px] border-ink bg-transparent text-right outline-none"
         />
         <span className="text-ink-3">:</span>
@@ -63,7 +65,9 @@ export function TimeInput({ hours, minutes, onChange, className }: TimeInputProp
           min={0}
           max={59}
           value={String(minutes).padStart(2, '0')}
-          onChange={(event) => onChange?.({ hours, minutes: clamp(Number(event.target.value), 0, 59) })}
+          onChange={(event) =>
+            onChange?.({ hours, minutes: clamp(Number(event.target.value), 0, 59) })
+          }
           className="w-[80px] border-0 border-b-[1.5px] border-ink bg-transparent text-left outline-none"
         />
       </div>

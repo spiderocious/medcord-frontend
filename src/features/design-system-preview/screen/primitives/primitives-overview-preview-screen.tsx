@@ -11,7 +11,11 @@ export function PrimitivesOverviewPreviewScreen() {
   if (!part) return null;
   return (
     <Page>
-      <Stamp number="II" title="Primitives" meta="buttons · inputs · selection · datetime · specialized" />
+      <Stamp
+        number="II"
+        title="Primitives"
+        meta="buttons · inputs · selection · datetime · specialized"
+      />
       <Sheet padding="md" className="max-w-[640px]">
         <ul className="m-0 flex list-none flex-col gap-3 p-0">
           {part.items.map((item) => (

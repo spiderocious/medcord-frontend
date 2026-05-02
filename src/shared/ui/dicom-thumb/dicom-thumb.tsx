@@ -19,10 +19,7 @@ export interface DicomThumbProps {
 export function DicomThumb({ modality, series, acquired, ww, className }: DicomThumbProps) {
   return (
     <div
-      className={cn(
-        'relative aspect-square border border-ink text-paper',
-        className,
-      )}
+      className={cn('relative aspect-square border border-ink text-paper', className)}
       style={{
         background: 'linear-gradient(135deg, #2A2520, #6E665B 60%, #A39A8A)',
       }}

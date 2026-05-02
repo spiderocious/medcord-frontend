@@ -14,11 +14,15 @@ import { Mark } from '@ui/typography';
 export function InputsPreviewScreen() {
   return (
     <Page>
-      <Stamp number="II · 02" title="Inputs · vitals & dosage" meta="designed for the fields used 200 times a shift" />
+      <Stamp
+        number="II · 02"
+        title="Inputs · vitals & dosage"
+        meta="designed for the fields used 200 times a shift"
+      />
       <p className="m-0 mb-4 max-w-[62ch] text-[14px] leading-[1.6] text-ink-2">
-        The default input is a line, not a box — chart paper. The label sits above in mono caps;
-        the value below in sans, or in mono if the value is a number on the record. Specialized
-        fields are designed first; the trivial text field is the simplest case of them.
+        The default input is a line, not a box — chart paper. The label sits above in mono caps; the
+        value below in sans, or in mono if the value is a number on the record. Specialized fields
+        are designed first; the trivial text field is the simplest case of them.
       </p>
 
       <SectionBreak label="Vitals — six readings, one block" />
@@ -107,16 +111,18 @@ function DosageLine() {
         </Select>
       </div>
       <div className="mt-2 flex gap-3.5 font-mono text-[11px] tracking-mono text-ink-3">
-        <span>renal-adjusted dose: <span className="text-ink">500 mg</span></span>
+        <span>
+          renal-adjusted dose: <span className="text-ink">500 mg</span>
+        </span>
         <span className="text-warn">max 2,000 mg / day</span>
         <span>est. cost / day · $1.40</span>
       </div>
-      <div className="mt-3 flex items-center gap-3 border border-crit-edge border-l-[3px] border-l-crit bg-crit-bg px-3.5 py-2.5 font-serif text-[14px] italic leading-[1.45] text-crit">
-        <span className="bg-crit px-1.5 py-0.5 font-mono text-[10px] font-semibold not-italic uppercase tracking-overline text-white">
+      <div className="mt-3 flex items-center gap-3 border border-l-[3px] border-crit-edge border-l-crit bg-crit-bg px-3.5 py-2.5 font-serif text-[14px] italic leading-[1.45] text-crit">
+        <span className="bg-crit px-1.5 py-0.5 font-mono text-[10px] font-semibold uppercase not-italic tracking-overline text-white">
           ALLERGY
         </span>
-        The patient is allergic to penicillin (anaphylaxis). Amoxicillin is the same class.
-        Override requires reason and is logged.
+        The patient is allergic to penicillin (anaphylaxis). Amoxicillin is the same class. Override
+        requires reason and is logged.
       </div>
     </div>
   );
@@ -145,12 +151,31 @@ function StructuredPair() {
 function StatesGrid() {
   return (
     <div className="grid grid-cols-3 gap-x-7 gap-y-4">
-      <TextField label="Default" placeholder="Search MRN, name, DOB" help="searchable from anywhere with /" />
+      <TextField
+        label="Default"
+        placeholder="Search MRN, name, DOB"
+        help="searchable from anywhere with /"
+      />
       <TextField label="Focus" defaultValue="Adebayo, O" />
       <TextField label="Disabled" defaultValue="signed by R. Patel · cannot edit" disabled />
-      <TextField label="Read-only" defaultValue="ICD-10 I10" readOnly help="signed records are read-only by default" />
-      <TextField label="Error" defaultValue="abc" status="error" help="pulse must be numeric, between 30 and 220" />
-      <TextField label="Verified" defaultValue="m.adebayo@example.com" status="ok" help="verified · primary contact" />
+      <TextField
+        label="Read-only"
+        defaultValue="ICD-10 I10"
+        readOnly
+        help="signed records are read-only by default"
+      />
+      <TextField
+        label="Error"
+        defaultValue="abc"
+        status="error"
+        help="pulse must be numeric, between 30 and 220"
+      />
+      <TextField
+        label="Verified"
+        defaultValue="m.adebayo@example.com"
+        status="ok"
+        help="verified · primary contact"
+      />
     </div>
   );
 }

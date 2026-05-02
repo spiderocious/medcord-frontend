@@ -64,7 +64,7 @@ export function RoomBedPicker({ cells, selectedId, onSelect, className }: RoomBe
               className={cn(
                 'font-serif text-[15px] font-medium tracking-h',
                 isSelected && 'text-paper',
-                cell.state === 'cleaning' && 'text-warn font-normal italic',
+                cell.state === 'cleaning' && 'font-normal italic text-warn',
                 cell.state === 'empty' && 'font-normal',
               )}
             >

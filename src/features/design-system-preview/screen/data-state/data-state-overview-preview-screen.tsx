@@ -11,7 +11,11 @@ export function DataStateOverviewPreviewScreen() {
   if (!part) return null;
   return (
     <Page>
-      <Stamp number="III" title="Data & state" meta="tables · lab · vitals · charts · cards · navigation" />
+      <Stamp
+        number="III"
+        title="Data & state"
+        meta="tables · lab · vitals · charts · cards · navigation"
+      />
       <Sheet padding="md" className="max-w-[640px]">
         <ul className="m-0 flex list-none flex-col gap-3 p-0">
           {part.items.map((item) => (

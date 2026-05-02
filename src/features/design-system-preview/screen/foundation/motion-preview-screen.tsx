@@ -28,17 +28,18 @@ export function MotionPreviewScreen() {
       <SectionBreak label="Curves — three, no more" />
       <Timing name="paper-out" detail="— ease-out" desc="entrances · default" puck="ease-out" />
       <Timing name="paper-in" detail="— ease-in" desc="exits · dismissals" puck="ease-in" />
-      <Timing
-        name="paper-turn"
-        detail="— ease-in-out"
-        desc="in-place transitions"
-        puck="ease-io"
-      />
+      <Timing name="paper-turn" detail="— ease-in-out" desc="in-place transitions" puck="ease-io" />
       <Timing name="linear" desc="progress, only · drips, infusions" puck="linear" />
 
       <SectionBreak label="Durations" />
       <Timing name="instant" detail="— 0 ms" desc="no animation" puck={undefined} />
-      <Timing name="fast" detail="— 100 ms" desc="hover, focus, micro-feedback" puck="ease-io" speed="fast" />
+      <Timing
+        name="fast"
+        detail="— 100 ms"
+        desc="hover, focus, micro-feedback"
+        puck="ease-io"
+        speed="fast"
+      />
       <Timing
         name="default"
         detail="— 200 ms"

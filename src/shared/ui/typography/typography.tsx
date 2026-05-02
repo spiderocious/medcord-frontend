@@ -36,9 +36,7 @@ export function Overline({ className, ...rest }: TextSpanProps) {
 }
 
 export function Numeric({ className, ...rest }: TextSpanProps) {
-  return (
-    <span className={cn('font-mono tabular-nums tracking-mono', className)} {...rest} />
-  );
+  return <span className={cn('font-mono tabular-nums tracking-mono', className)} {...rest} />;
 }
 
 export function RecordNumber({ className, ...rest }: TextSpanProps) {

@@ -20,7 +20,11 @@ import { Mark } from '@ui/typography';
 export function SelectionPreviewScreen() {
   return (
     <Page>
-      <Stamp number="II · 03" title="Selection" meta="ticks · circles · switches · pills · pickers" />
+      <Stamp
+        number="II · 03"
+        title="Selection"
+        meta="ticks · circles · switches · pills · pickers"
+      />
 
       <SectionBreak label="Discharge checklist" />
       <ChecklistDemo />
@@ -64,16 +68,26 @@ function ChecklistDemo() {
           2 / 4
         </span>
       </h3>
-      <Checkbox checked={items.notes} onChange={(checked) => setItems({ ...items, notes: checked })}>
+      <Checkbox
+        checked={items.notes}
+        onChange={(checked) => setItems({ ...items, notes: checked })}
+      >
         Discharge note signed
       </Checkbox>
       <Checkbox checked={items.rx} onChange={(checked) => setItems({ ...items, rx: checked })}>
         Prescriptions sent to pharmacy
       </Checkbox>
-      <Checkbox checked={items.followup} onChange={(checked) => setItems({ ...items, followup: checked })}>
+      <Checkbox
+        checked={items.followup}
+        onChange={(checked) => setItems({ ...items, followup: checked })}
+      >
         Follow-up appointment booked
       </Checkbox>
-      <Checkbox checked={items.avs} onChange={(checked) => setItems({ ...items, avs: checked })} meta="optional">
+      <Checkbox
+        checked={items.avs}
+        onChange={(checked) => setItems({ ...items, avs: checked })}
+        meta="optional"
+      >
         After-visit summary printed
       </Checkbox>
     </div>
@@ -165,7 +179,9 @@ function ChipsInputDemo() {
   return (
     <ChipsInput
       value={items}
-      onAdd={(label) => setItems((prev) => [...prev, { id: String(Date.now()), label, tone: 'warn' }])}
+      onAdd={(label) =>
+        setItems((prev) => [...prev, { id: String(Date.now()), label, tone: 'warn' }])
+      }
       onRemove={(id) => setItems((prev) => prev.filter((x) => x.id !== id))}
       placeholder="Add allergy…"
     />
@@ -185,7 +201,13 @@ function ProviderPicker() {
   const [active, setActive] = useState<string | undefined>('patel');
 
   const allProviders: Provider[] = [
-    { id: 'patel', name: 'Patel, R MD', meta: 'Cardiology · attending · 3-N', when: 'on now', online: true },
+    {
+      id: 'patel',
+      name: 'Patel, R MD',
+      meta: 'Cardiology · attending · 3-N',
+      when: 'on now',
+      online: true,
+    },
     { id: 'kim', name: 'Kim, S NP', meta: 'Cardiology · NP · 3-N', when: 'on at 19:00' },
     { id: 'oz', name: 'Ozawa, K MD', meta: 'Hospitalist · 4-N', when: 'on at 07:00 tomorrow' },
   ];

@@ -91,7 +91,15 @@ export function ButtonsPreviewScreen() {
           </Button>
           <Toolbar.Divider />
           <Button variant="quiet" size="sm" className="px-2" aria-label="Search">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round">
+            <svg
+              viewBox="0 0 24 24"
+              width="14"
+              height="14"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.7"
+              strokeLinecap="round"
+            >
               <circle cx="11" cy="11" r="7" />
               <path d="M21 21l-4-4" />
             </svg>
@@ -105,7 +113,15 @@ export function ButtonsPreviewScreen() {
             className="rounded-paper bg-ink px-2 text-paper hover:bg-ink"
             aria-label="Print"
           >
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round">
+            <svg
+              viewBox="0 0 24 24"
+              width="14"
+              height="14"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.7"
+              strokeLinecap="round"
+            >
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
               <path d="M7 10l5 5 5-5" />
               <path d="M12 15V3" />

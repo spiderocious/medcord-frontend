@@ -60,7 +60,10 @@ export function PinInput({
 
   function onPaste(index: number, event: ClipboardEvent<HTMLInputElement>) {
     event.preventDefault();
-    const text = event.clipboardData.getData('text').replace(/\D/g, '').slice(0, length - index);
+    const text = event.clipboardData
+      .getData('text')
+      .replace(/\D/g, '')
+      .slice(0, length - index);
     if (!text) return;
     const merged = value.slice(0, index) + text + value.slice(index + text.length);
     onChange(merged.slice(0, length));

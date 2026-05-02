@@ -75,8 +75,7 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(function T
           mono ? 'font-mono tabular-nums' : 'font-sans',
           variant === 'underline' &&
             cn('border-0 border-b px-0', STATUS_UNDERLINE[status], dashed && 'border-dashed'),
-          variant === 'block' &&
-            cn('h-auto rounded-card border px-3 py-2', STATUS_BLOCK[status]),
+          variant === 'block' && cn('h-auto rounded-card border px-3 py-2', STATUS_BLOCK[status]),
           disabled && 'cursor-not-allowed text-ink-3',
           className,
         )}

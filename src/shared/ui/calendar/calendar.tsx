@@ -56,9 +56,7 @@ export function Calendar({
   initialMonth,
   className,
 }: CalendarProps) {
-  const [cursor, setCursor] = useState<Date>(
-    initialMonth ?? value?.start ?? new Date(),
-  );
+  const [cursor, setCursor] = useState<Date>(initialMonth ?? value?.start ?? new Date());
 
   const cells = useMemo(() => buildCells(cursor), [cursor]);
   const today = new Date();

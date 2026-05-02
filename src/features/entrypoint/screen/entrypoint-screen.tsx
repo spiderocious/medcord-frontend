@@ -13,12 +13,12 @@ export function EntrypointScreen() {
         Caelum
       </h1>
       <p className="max-w-xl text-[15px] leading-[1.6] text-ink-2">
-        The hospital management workspace. The design system is the working draft of every
-        component before it ships into a feature.
+        The hospital management workspace. The design system is the working draft of every component
+        before it ships into a feature.
       </p>
       <Link
         to={ROUTES.DESIGN_SYSTEM.absPath}
-        className="inline-flex h-10 items-center gap-2 rounded-control border border-ink bg-ink px-5 font-sans text-[13px] font-medium tracking-[0.005em] text-paper transition-colors duration-fast ease-paper-out hover:bg-ink-2 hover:border-ink-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-700/40"
+        className="focus-visible:ring-green-700/40 inline-flex h-10 items-center gap-2 rounded-control border border-ink bg-ink px-5 font-sans text-[13px] font-medium tracking-[0.005em] text-paper transition-colors duration-fast ease-paper-out hover:border-ink-2 hover:bg-ink-2 focus-visible:outline-none focus-visible:ring-2"
       >
         Open the design system
         <ArrowRight className="h-3.5 w-3.5" aria-hidden />
