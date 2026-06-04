@@ -10,7 +10,7 @@ export function EntrypointScreen() {
         Medcord · scaffold online
       </div>
       <h1 className="m-0 font-serif text-[64px] font-medium leading-[1] tracking-display text-ink">
-        Caelum
+        MedCord
       </h1>
       <p className="max-w-xl text-[15px] leading-[1.6] text-ink-2">
         The hospital management workspace. The design system is the working draft of every component
